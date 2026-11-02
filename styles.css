@@ -41,3 +41,12 @@ body{background:#101113;color:#f1f2f3}.header{background:#09090b;border-bottom:1
 
 /* Photo-only masonry gallery, preserving each image's full framing. */
 .finished-grid{display:block;columns:4;column-gap:20px}.finished-item{display:block;break-inside:avoid;margin:0 0 20px;border-radius:10px;overflow:hidden;background:#090a0c}.finished-item>img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:initial;transition:filter .2s}.finished-item:hover>img{filter:brightness(1.1)}.finished-item:focus-visible{outline:3px solid #ed2338;outline-offset:4px}@media(max-width:1100px){.finished-grid{columns:3}}@media(max-width:800px){.finished-grid{columns:2;column-gap:16px}.finished-item{margin-bottom:16px}}@media(max-width:480px){.finished-grid{columns:1}}@media(prefers-reduced-motion:reduce){.finished-item>img{transition:none}}
+
+/* Expanded service collection */
+.services .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.services .service-card{min-width:0;display:flex;flex-direction:column}
+.services .service-card h3{font-size:clamp(1.35rem,2vw,1.75rem);line-height:1.2}
+.services .service-card p{flex:1}
+.services .service-card a{margin-top:24px}
+@media(max-width:1000px){.services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.services .service-grid{grid-template-columns:1fr}}
